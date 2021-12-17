@@ -1,9 +1,4 @@
-const ref = {
-  row: document.getElementById('row'),
-  resBtn: document.getElementById('res'),
-  delBtn: document.getElementById('del'),
-  addBtn: document.getElementById('add'),
-};
+import ref from './js/reference.js';
 
 function reset() {
   ref.delBtn.disabled = false;
@@ -94,3 +89,16 @@ function stopBlinking(parent) {
     element.style = null;
   });
 }
+
+// ES modules default export (used to export single value from module and you can rename your import if you'd like to)
+// use type="module" in <script src="./main.js"></script>
+// export default
+// import anyName from './path'
+
+// ES modules named export (used to expor multiple values from module)
+// use type="module" in <script src="./main.js"></script>
+// export
+// import {exactName1, exactName2} from './path'
+// import {exactName1 as newName1, exactName2 as newName2} from './path'
+
+// import anyName, {exactName1, exactName2} from './path' - both default and named import
